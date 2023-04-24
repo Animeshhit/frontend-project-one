@@ -84,11 +84,13 @@ const showHtml = () => {
 
 button.addEventListener("click", () => {
   searhApi(inputBox.value);
+  inputBox.value = null;
 });
 inputBox.addEventListener("focus", (e) => {
   window.addEventListener("keydown", (e) => {
     if (e.key == "Enter") {
       searhApi(inputBox.value);
+      inputBox.value = null;
     }
   });
 });
