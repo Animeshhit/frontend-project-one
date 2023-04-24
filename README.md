@@ -25,12 +25,17 @@ This web application allows users to enter a long URL and get a shortened URL in
 - HTML
 - CSS
 - JavaScript
+<<<<<<< HEAD
 - [Url Shortner API](https://api.shrtco.de/)
 - [Fetch Api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) - Provides a JavaScript Interface for accessing and manipulating parts of the protocol, such as requests and responses.
+=======
+- [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and Node.js
+>>>>>>> 15cb26b2acaa8b491a6cdc5e2e34f646aa1474a9
 
 ## Installation
 
 To install this web application, simply clone this repository to your local machine.
+<<<<<<< HEAD
 
 ```bash
  git clone https://github.com/Animeshhit/frontend-project-one
@@ -47,3 +52,22 @@ If you would like to contribute to this web application, please fork this reposi
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+=======
+```bash
+ git clone https://github.com/Animeshhit/frontend-project-one
+```
+
+## Usage
+
+To use this web application, open the `index.html` file in your web browser. Enter a long URL in the input field and click the "Shorten" button. The shortened URL will be displayed below the input field. Click the "Copy" button to copy the shortened URL to your clipboard.
+
+## Contributing
+
+If you would like to contribute to this web application, please fork this repository and submit a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+>>>>>>> 15cb26b2acaa8b491a6cdc5e2e34f646aa1474a9
