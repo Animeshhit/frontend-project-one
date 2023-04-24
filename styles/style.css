@@ -280,11 +280,37 @@ a {
   background-size: cover;
 }
 
+.searchbar.error {
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.searchbar.error input {
+  border: 2px solid var(--secondary-red);
+}
+
+.searchbar.error input::placeholder {
+  color: var(--secondary-red);
+}
+
 .searchbar input {
   padding: 0.6rem 1rem;
   border-radius: 6px;
   border: none;
   outline: none;
+  width: 100%;
+}
+.searchbar.error .input_box p {
+  display: block;
+}
+.searchbar .input_box {
+  position: relative;
+}
+.searchbar .input_box p {
+  position: absolute;
+  color: var(--secondary-red);
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  display: none;
 }
 .btn-rounded {
   border: none;
@@ -295,15 +321,25 @@ a {
 @media (max-width: 1000px) {
   .searchbar {
     width: 95%;
+    top: -4%;
   }
 }
 @media (max-width: 700px) {
   .searchbar {
     flex-direction: column;
-    width: 95%;
+    width: 94%;
     gap: 0;
     top: -4%;
     background-image: url("/assets/bg-shorten-mobile.svg");
+  }
+  .searchbar .input_box {
+    width: 100%;
+  }
+  .searchbar.error {
+    padding: 1.5rem 2rem;
+  }
+  .searchbar.error .input_box {
+    margin-bottom: 0.8rem;
   }
   .searchbar input {
     width: 100%;
@@ -316,10 +352,81 @@ a {
     margin-top: 9rem;
   }
 }
+@media (max-width: 600px) {
+  .searchbar {
+    width: 92%;
+  }
+}
+/* url  */
+.url_links {
+  padding: 4rem 0;
+}
+.url_link {
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.url_link h2 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--secondary-dark-violet);
+}
+.url_link p {
+  font-size: 0.9rem;
+  color: var(--primary-cyan);
+}
+@media (max-width: 1000px) {
+  .url_links {
+    padding: 5rem 0;
+  }
+}
+@media (max-width: 800px) {
+  .url_links {
+    padding: 5rem 0;
+  }
+}
+@media (max-width: 796px) {
+  .url_links {
+    padding: 5rem 0;
+  }
+}
+@media (max-width: 720px) {
+  .url_links {
+    padding: 7rem 0;
+  }
+  .url_link {
+    flex-direction: column;
+    align-items: start;
+  }
+  .url_link div {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    align-items: start;
+    margin-top: 1rem;
+  }
+  .url_link div button {
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+}
+.copied {
+  background: var(--primary-violet) !important;
+}
+.copy:hover {
+  background-color: var(--primary-violet) !important;
+}
+@media (max-width: 400px) {
+  .url_links {
+    padding: 6rem 0;
+  }
+}
 /* advanced section  */
 
 #advanced_section {
-  padding: 8rem 0.6rem 0 0.6rem;
+  padding: 2rem 0.6rem;
 }
 .advanced h1 {
   text-align: center;
@@ -394,6 +501,9 @@ a {
   }
 }
 @media (max-width: 768px) {
+  #advanced_section {
+    padding: 0 0.6rem;
+  }
   .cards {
     flex-direction: column;
     gap: 0;
