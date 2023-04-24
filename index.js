@@ -39,10 +39,10 @@ const searhApi = async (value) => {
     showHtml();
   } else {
     searchBar.classList.add("error");
-    if (ApiReq.error_code == 2) {
+    if (ApiRes.error_code == 2) {
       error.innerText = "invalid Url";
     } else {
-      error.innerText = ApiReq.error;
+      error.innerText = ApiRes.error;
     }
   }
 };
