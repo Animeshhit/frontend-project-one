@@ -21,12 +21,12 @@ const searhApi = async (value) => {
     return searchBar.classList.add("error");
   }
   button.innerText = "Loading...";
-  button.disabled = "true";
+  button.disabled = true;
   let apiUrl = "https://api.shrtco.de/v2/shorten";
   let ApiReq = await fetch(apiUrl + `?url=${value}`);
   let ApiRes = await ApiReq.json();
   button.innerText = "Shorten it!";
-  button.disabled = "false";
+  button.disabled = false;
   if (ApiRes.ok) {
     searchBar.classList.remove("error");
     const localData = JSON.parse(data);
